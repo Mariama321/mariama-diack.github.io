@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Mariama DIACK - Spécialiste en Cybersécurité | Certified Phishing Prevention Specialist (CPPS) | Projets académiques et certifications">
+    <meta name="keywords" content="cybersécurité, phishing, sécurité informatique, portfolio, Mariama DIACK">
+    <meta name="author" content="Mariama DIACK">
+    
+    <!-- Open Graph pour LinkedIn et réseaux sociaux -->
+    <meta property="og:title" content="Mariama DIACK - Cybersecurity Portfolio">
+    <meta property="og:description" content="Spécialiste en Cybersécurité | CPPS & CCSC Certified">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://votre-nom.github.io/preview.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mariama DIACK - Cybersecurity Portfolio">
+    <meta name="twitter:description" content="Spécialiste en Cybersécurité | CPPS & CCSC Certified">
+    
+    <title>Mariama DIACK | Cybersecurity Portfolio</title>
+    
+    <style>
+        :root {
+            --primary-green: #00ff41;
+            --secondary-cyan: #64ffda;
+            --dark-bg: #0a0e27;
+            --card-bg: #1a1f3a;
+            --text-light: #e0e0e0;
+            --text-gray: #b0b0b0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Matrix Background Effect */
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+
+        /* Navigation */
+        header {
+            background: linear-gradient(135deg, var(--card-bg) 0%, var(--dark-bg) 100%);
+            padding: 1.5rem 0;
+            border-bottom: 2px solid var(--primary-green);
+            box-shadow: 0 4px 20px rgba(0, 255, 65, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-green);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo::before {
+            content: "🛡️";
+            font-size: 1.8rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 500;
+            position: relative;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-green);
+            transition: width 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-green);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-green);
+            text-shadow: 0 0 20px rgba(0, 255, 65, 0.5);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 20px rgba(0, 255, 65, 0.5); }
+            to { text-shadow: 0 0 30px rgba(0, 255, 65, 0.8); }
+        }
+
+        .hero .subtitle {
+            font-size: 1.8rem;
+            color: var(--secondary-cyan);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+
+        .hero .motto {
+            font-style: italic;
+            color: var(--secondary-cyan);
+            margin-top: 2rem;
+            font-size: 1.1rem;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        /* Section Title */
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--primary-green), transparent);
+        }
+
+        /* Certifications Grid */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .cert-card {
+            background: linear-gradient(135deg, var(--card-bg) 0%, #0f1729 100%);
+            border: 1px solid var(--primary-green);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cert-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 255, 65, 0.1) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0, 255, 65, 0.3);
+            border-color: var(--secondary-cyan);
+        }
+
+        .cert-card:hover::before {
+            opacity: 1;
+        }
+
+        .cert-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .cert-card h3 {
+            color: var(--primary-green);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cert-card .cert-org {
+            color: var(--secondary-cyan);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .cert-card .cert-date {
+            color: #888;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-card .cert-id {
+            color: #666;
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            font-family: 'Courier New', monospace;
+            padding: 0.5rem;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, var(--card-bg) 0%, #0f1729 100%);
+            border: 1px solid #444;
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 65, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .project-card:hover::before {
+            left: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary-green);
+            box-shadow: 0 10px 30px rgba(0, 255, 65, 0.2);
+        }
+
+        .project-card h3 {
+            color: var(--primary-green);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-card p {
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            background: rgba(0, 255, 65, 0.1);
+            border: 1px solid var(--primary-green);
+            color: var(--primary-green);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+        }
+
+        .tech-tag:hover {
+            background: var(--primary-green);
+            color: var(--dark-bg);
+            transform: scale(1.05);
+        }
+
+        /* Skills Section */
+        .skills-section {
+            background: linear-gradient(135deg, var(--card-bg) 0%, #0f1729 100%);
+            padding: 3rem;
+            border-radius: 15px;
+            margin-bottom: 4rem;
+            border: 1px solid var(--primary-green);
+            box-shadow: 0 10px 40px rgba(0, 255, 65, 0.1);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .skill-category h3 {
+            color: var(--secondary-cyan);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-category h3::before {
+            content: "▸";
+            color: var(--primary-green);
+            font-size: 1.5rem;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            padding: 0.7rem 0;
+            color: var(--text-gray);
+            position: relative;
+            padding-left: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .skill-category li::before {
+            content: "▸";
+            color: var(--primary-green);
+            position: absolute;
+            left: 0;
+            transition: transform 0.3s;
+        }
+
+        .skill-category li:hover {
+            color: var(--text-light);
+            padding-left: 2rem;
+        }
+
+        .skill-category li:hover::before {
+            transform: translateX(5px);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            text-align: center;
+            padding: 3rem;
+            background: linear-gradient(135deg, var(--card-bg) 0%, #0f1729 100%);
+            border-radius: 15px;
+            border: 1px solid var(--primary-green);
+            box-shadow: 0 10px 40px rgba(0, 255, 65, 0.1);
+        }
+
+        .contact-section p {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            background: transparent;
+            border: 2px solid var(--primary-green);
+            color: var(--primary-green);
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .contact-btn:hover {
+            background: var(--primary-green);
+            color: var(--dark-bg);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 255, 65, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: var(--dark-bg);
+            color: #666;
+            margin-top: 4rem;
+            border-top: 1px solid var(--primary-green);
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        footer .motto {
+            color: var(--secondary-cyan);
+            font-style: italic;
+            margin-top: 1rem;
+        }
+
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--primary-green);
+            color: var(--dark-bg);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 1000;
+            font-size: 1.5rem;
+            border: 2px solid var(--primary-green);
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            background: transparent;
+            color: var(--primary-green);
+            transform: translateY(-5px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.3rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                margin-top: 1rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .certifications-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo {
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas class="matrix-bg" id="matrix"></canvas>
+
+    <header>
+        <nav>
+            <a href="#home" class="logo">Mariama DIACK</a>
+            <ul>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>MARIAMA DIACK</h1>
+        <div class="subtitle">Cybersecurity Specialist</div>
+        <p>Passionnée par la sécurité informatique et la protection des systèmes d'information. Spécialisée dans la prévention du phishing et la sensibilisation à la cybersécurité. Mon approche combine expertise technique et pédagogie pour créer des environnements numériques plus sûrs.</p>
+        <p class="motto">💡 "Toujours continuer à apprendre et augmenter son savoir"</p>
+    </section>
+
+    <div class="container">
+        <section id="certifications">
+            <h2 class="section-title">🎓 Certifications</h2>
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <span class="cert-icon">📧</span>
+                    <h3>Certified Phishing Prevention Specialist</h3>
+                    <p class="cert-org">Hack & Fix Academy</p>
+                    <p class="cert-date">📅 Décembre 2025</p>
+                    <p class="cert-id">🆔 ID: 1439-1575-2218-9216</p>
+                </div>
+
+                <div class="cert-card">
+                    <span class="cert-icon">🚀</span>
+                    <h3>Cybersecurity Career Starter Certification</h3>
+                    <p class="cert-org">Hack & Fix Academy</p>
+                    <p class="cert-date">📅 Décembre 2025</p>
+                    <p class="cert-id">🆔 ID: 3523-4146-3566-5345</p>
+                </div>
+
+                <!-- Ajoutez d'autres certifications ici en copiant le format ci-dessus -->
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title">💼 Projets Académiques</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>🔐 Analyse de Vulnérabilités Web</h3>
+                    <p>Réalisation d'une analyse complète de vulnérabilités sur une application web de test. Identification et exploitation de failles OWASP Top 10, avec rapport détaillé et recommandations de correction.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Burp Suite</span>
+                        <span class="tech-tag">OWASP ZAP</span>
+                        <span class="tech-tag">SQL Injection</span>
+                        <span class="tech-tag">XSS</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>🛡️ Campagne Anti-Phishing</h3>
+                    <p>Conception et déploiement d'une campagne de sensibilisation au phishing incluant simulations d'attaques, modules de formation interactifs et mesure de l'amélioration de la vigilance des utilisateurs.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Social Engineering</span>
+                        <span class="tech-tag">GoPhish</span>
+                        <span class="tech-tag">Email Security</span>
+                        <span class="tech-tag">Training</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>🔍 Audit de Sécurité Réseau</h3>
+                    <p>Audit complet d'un réseau d'entreprise simulé avec tests de pénétration, analyse des configurations de sécurité, et élaboration d'un plan de remédiation priorisé.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Nmap</span>
+                        <span class="tech-tag">Metasploit</span>
+                        <span class="tech-tag">Wireshark</span>
+                        <span class="tech-tag">Reporting</span>
+                    </div>
+                </div>
+
+                <!-- Ajoutez d'autres projets ici -->
+                <div class="project-card">
+                    <h3>🔒 Implémentation VPN Sécurisé</h3>
+                    <p>Configuration et déploiement d'une solution VPN avec authentification forte et chiffrement des communications. Documentation complète et formation des utilisateurs.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">OpenVPN</span>
+                        <span class="tech-tag">Cryptographie</span>
+                        <span class="tech-tag">PKI</span>
+                        <span class="tech-tag">Linux</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>🤖 Script d'Automatisation Sécurité</h3>
+                    <p>Développement d'un outil Python pour automatiser la collecte d'indicateurs de compromission (IOC) et la génération de rapports de sécurité quotidiens.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Automation</span>
+                        <span class="tech-tag">SIEM</span>
+                        <span class="tech-tag">API</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>📊 Analyse de Logs Sécurité</h3>
+                    <p>Mise en place d'une solution de collecte et d'analyse de logs pour détecter les comportements anormaux et les tentatives d'intrusion sur un système d'information.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">ELK Stack</span>
+                        <span class="tech-tag">Splunk</span>
+                        <span class="tech-tag">Log Analysis</span>
+                        <span class="tech-tag">SIEM</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2 class="section-title">⚡ Compétences Techniques</h2>
+            <div class="skills-section">
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Sécurité Réseau</h3>
+                        <ul>
+                            <li>Configuration Firewall</li>
+                            <li>IDS/IPS (Snort, Suricata)</li>
+                            <li>VPN & Tunneling</li>
+                            <li>Network Segmentation</li>
+                            <li>Protocol Analysis</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Tests de Pénétration</h3>
+                        <ul>
+                            <li>Kali Linux</li>
+                            <li>Metasploit Framework</li>
+                            <li>Burp Suite Pro</li>
+                            <li>Nmap & Nessus</li>
+                            <li>OWASP Methodology</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Programmation & Scripting</h3>
+                        <ul>
+                            <li>Python (Security Scripts)</li>
+                            <li>Bash Scripting</li>
+                            <li>PowerShell</li>
+                            <li>SQL & NoSQL</li>
+                            <li>Git & GitHub</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Sécurité des Applications</h3>
+                        <ul>
+                            <li>Web Application Security</li>
+                            <li>OWASP Top 10</li>
+                            <li>Code Review</li>
+                            <li>Secure Coding</li>
+                            <li>API Security</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Sensibilisation & Formation</h3>
+                        <ul>
+                            <li>Phishing Prevention</li>
+                            <li>Security Awareness</li>
+                            <li>Social Engineering Defense</li>
+                            <li>Training Programs</li>
+                            <li>Policy Development</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Outils & Plateformes</h3>
+                        <ul>
+                            <li>Wireshark</li>
+                            <li>Splunk / ELK Stack</li>
+                            <li>VMware / VirtualBox</li>
+                            <li>Docker & Kubernetes</li>
+                            <li>Active Directory</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="contact-section">
+                <h2 class="section-title">📬 Contactez-moi</h2>
+                <p>Intéressé par mon profil ou souhaitez collaborer ? N'hésitez pas à me contacter !</p>
+                <div class="contact-links">
+                    <a href="https://www.linkedin.com/in/votre-profil" class="contact-btn" target="_blank" rel="noopener">
+                        💼 LinkedIn
+                    </a>
+                    <a href="mailto:votre.email@example.com" class="contact-btn">
+                        📧 Email
+                    </a>
+                    <a href="https://github.com/votre-profil" class="contact-btn" target="_blank" rel="noopener">
+                        💻 GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="scroll-top" id="scrollTop">↑</div>
+
+    <footer>
+        <p>&copy; 2025 Mariama DIACK - Cybersecurity Portfolio</p>
+        <p class="motto">🔐 Toujours continuer à apprendre et augmenter son savoir</p>
+    </footer>
+
+    <script>
+        // Matrix Background Effect
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌ
