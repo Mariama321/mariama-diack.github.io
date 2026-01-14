@@ -1,131 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mariama Diack | Cybersecurity Portfolio</title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariama Diack | Portfolio Cybersécurité</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HEADER / HERO -->
-  <header>
+<header>
     <h1>Mariama DIACK</h1>
-    <p>Junior Cybersecurity | Linux Systems & Network Security</p>
-    <p>Securing infrastructures • Monitoring systems • Continuous learning</p>
-  </header>
+    <p class="subtitle">
+        Cybersécurité Junior | Administration Systèmes Linux & Réseaux
+    </p>
+</header>
 
-  <!-- ABOUT -->
-  <section>
-    <h2>About Me</h2>
-    <div class="card">
-      <p>
-        I am a junior graduate in Cybersecurity with a strong academic background in
-        Linux systems administration, network security, and infrastructure monitoring.
-      </p>
-      <p>
-        My focus is on securing systems, detecting threats, and continuously improving
-        my technical skills through hands-on projects and real-world simulations.
-      </p>
-    </div>
-  </section>
+<section id="about">
+    <h2>À propos</h2>
+    <p>
+        Jeune diplômée en cybersécurité, spécialisée en administration des systèmes Linux,
+        réseaux et sécurité informatique. Passionnée par la protection des infrastructures,
+        la détection des menaces et l’apprentissage continu.
+    </p>
+    <p>
+        Actuellement à la recherche d’un stage ou d’une opportunité junior afin de renforcer
+        mes compétences à travers des projets concrets et des environnements réels.
+    </p>
+</section>
 
-  <!-- PROJECTS -->
-  <section>
-    <h2>Projects</h2>
+<section id="projects">
+    <h2>Projets</h2>
 
-    <div class="card">
-      <h3>Secure Linux Infrastructure</h3>
-      <p>
-        Design and implementation of a secured Linux infrastructure with firewall,
-        intrusion detection and log correlation.
-      </p>
-      <div>
-        <span class="badge">Linux</span>
-        <span class="badge">pfSense</span>
-        <span class="badge">Suricata</span>
-        <span class="badge">Wazuh</span>
-      </div>
-      <p>
-        <a href="#" target="_blank">View project →</a>
-      </p>
+    <div class="project-card">
+        <h3>Infrastructure Linux Sécurisée</h3>
+        <p>
+            Mise en place d’une infrastructure Linux sécurisée avec pare-feu,
+            détection d’intrusions et journalisation centralisée.
+        </p>
+        <p class="tech">Linux • pfSense • Suricata • Wazuh</p>
+        <a href="https://github.com/mariama-diack/secure-linux-infrastructure" target="_blank">
+            Voir le projet →
+        </a>
     </div>
 
-    <div class="card">
-      <h3>Network Monitoring & Supervision</h3>
-      <p>
-        Monitoring of servers and network devices to ensure availability and detect failures.
-      </p>
-      <div>
-        <span class="badge">Nagios</span>
-        <span class="badge">LibreNMS</span>
-        <span class="badge">Debian</span>
-      </div>
+    <div class="project-card">
+        <h3>Supervision Réseau & Systèmes</h3>
+        <p>
+            Déploiement d’outils de supervision pour surveiller la disponibilité
+            des serveurs et équipements réseau.
+        </p>
+        <p class="tech">Nagios • LibreNMS • TCP/IP</p>
+        <a href="https://github.com/mariama-diack/network-monitoring" target="_blank">
+            Voir le projet →
+        </a>
     </div>
 
-    <div class="card">
-      <h3>Network Services Deployment</h3>
-      <p>
-        Deployment and configuration of core network services on Linux servers.
-      </p>
-      <div>
-        <span class="badge">DNS</span>
-        <span class="badge">DHCP</span>
-        <span class="badge">HTTP/HTTPS</span>
-        <span class="badge">Mail</span>
-      </div>
+    <div class="project-card">
+        <h3>Laboratoire SIEM & Sécurité</h3>
+        <p>
+            Implémentation d’un environnement SIEM pour la détection,
+            l’analyse et la corrélation des événements de sécurité.
+        </p>
+        <p class="tech">Wazuh • Linux • Logs • Sécurité</p>
+        <a href="https://github.com/mariama-diack/wazuh-siem-lab" target="_blank">
+            Voir le projet →
+        </a>
     </div>
 
-    <div class="card">
-      <h3>Offensive Security Labs (Academic)</h3>
-      <p>
-        Controlled attack simulations to understand vulnerabilities and privilege escalation.
-      </p>
-      <div>
-        <span class="badge">Kali Linux</span>
-        <span class="badge">Metasploit</span>
-        <span class="badge">Netcat</span>
-      </div>
-    </div>
+</section>
 
-  </section>
+<section id="skills">
+    <h2>Compétences</h2>
 
-  <!-- SKILLS -->
-  <section>
-    <h2>Skills</h2>
-    <div class="card">
-      <p><strong>Systems:</strong> Linux (Debian, Ubuntu)</p>
-      <p><strong>Networks:</strong> TCP/IP, Routing, DNS, DHCP</p>
-      <p><strong>Security:</strong> pfSense, Suricata, Wazuh, Wireshark</p>
-      <p><strong>Monitoring:</strong> Nagios, LibreNMS</p>
-      <p><strong>Containers:</strong> Docker (basics)</p>
-    </div>
-  </section>
+    <ul>
+        <li><strong>Systèmes :</strong> Linux (Debian, Ubuntu)</li>
+        <li><strong>Réseaux :</strong> TCP/IP, DNS, DHCP, Routage</li>
+        <li><strong>Sécurité :</strong> pfSense, Suricata, Wazuh, Wireshark</li>
+        <li><strong>Supervision :</strong> Nagios, LibreNMS</li>
+        <li><strong>Outils :</strong> GitHub, VirtualBox, VMware</li>
+    </ul>
+</section>
 
-  <!-- CERTIFICATIONS -->
-  <section>
+<section id="certifications">
     <h2>Certifications</h2>
-    <div class="card">
-      <ul>
+    <ul>
         <li>Cybersecurity Career Starter Certification (CCSC)</li>
         <li>Certified Phishing Prevention Specialist (CPPS)</li>
         <li>Cisco Networking Academy – Learn-A-Thon 2025</li>
-      </ul>
-    </div>
-  </section>
+    </ul>
+</section>
 
-  <!-- CONTACT -->
-  <section>
-    <h2>Contact</h2>
-    <div class="card">
-      <p>Email: <a href="mailto:diackmariam3@gmail.com">diackmariam3@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/mariamd3" target="_blank">linkedin.com/in/mariamd3</a></p>
-      <p>GitHub: <a href="https://github.com/mariama-diack" target="_blank">github.com/mariama-diack</a></p>
-    </div>
-  </section>
+<footer>
+    <p>
+        📧 Contact : <a href="mailto:mariama.diack@email.com">mariama.diack@email.com</a>
+    </p>
+    <p>
+        🔗 GitHub :
+        <a href="https://github.com/mariama-diack" target="_blank">
+            github.com/mariama-diack
+        </a>
+    </p>
+</footer>
 
 </body>
 </html>
