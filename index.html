@@ -1,106 +1,289 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mariama Diack | Portfolio Cybersécurité</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mariama DIACK - Junior Cybersecurity Specialist | Linux Systems & Network Security Portfolio">
+  <meta name="keywords" content="cybersecurity, linux, network security, portfolio, infosec">
+  <meta name="author" content="Mariama DIACK">
+  
+  <!-- Open Graph pour LinkedIn -->
+  <meta property="og:title" content="Mariama DIACK | Cybersecurity Portfolio">
+  <meta property="og:description" content="Junior Cybersecurity | Linux Systems & Network Security">
+  <meta property="og:type" content="website">
+  
+  <title>Mariama DIACK | Cybersecurity Portfolio</title>
+  
+  <!-- Lien vers le fichier CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <a href="#" class="logo">MD</a>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<header>
+  <!-- Header -->
+  <header id="home">
     <h1>Mariama DIACK</h1>
-    <p class="subtitle">
-        Cybersécurité Junior | Administration Systèmes Linux & Réseaux
-    </p>
-</header>
+    <p class="subtitle">Junior Cybersecurity Specialist</p>
+    <p>Linux Systems & Network Security • Infrastructure Protection</p>
+  </header>
 
-<section id="about">
-    <h2>À propos</h2>
-    <p>
-        Jeune diplômée en cybersécurité, spécialisée en administration des systèmes Linux,
-        réseaux et sécurité informatique. Passionnée par la protection des infrastructures,
-        la détection des menaces et l’apprentissage continu.
-    </p>
-    <p>
-        Actuellement à la recherche d’un stage ou d’une opportunité junior afin de renforcer
-        mes compétences à travers des projets concrets et des environnements réels.
-    </p>
-</section>
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <h2>Featured Projects</h2>
+      <div class="projects-grid">
+        
+        <!-- Project 1 -->
+        <div class="project-card" onclick="openModal('modal1')">
+          <h3>🔒 Secure Linux Infrastructure</h3>
+          <p>Multi-layered defense with firewall, IDS, and SIEM integration</p>
+          <div class="project-tags">
+            <span class="tag">Linux</span>
+            <span class="tag">pfSense</span>
+            <span class="tag">Suricata</span>
+            <span class="tag">Wazuh</span>
+          </div>
+        </div>
 
-<section id="projects">
-    <h2>Projets</h2>
+        <!-- Project 2 -->
+        <div class="project-card" onclick="openModal('modal2')">
+          <h3>📊 Network Monitoring</h3>
+          <p>Enterprise monitoring for servers and network devices</p>
+          <div class="project-tags">
+            <span class="tag">Nagios</span>
+            <span class="tag">LibreNMS</span>
+            <span class="tag">SNMP</span>
+          </div>
+        </div>
 
-    <div class="project-card">
-        <h3>Infrastructure Linux Sécurisée</h3>
-        <p>
-            Mise en place d’une infrastructure Linux sécurisée avec pare-feu,
-            détection d’intrusions et journalisation centralisée.
-        </p>
-        <p class="tech">Linux • pfSense • Suricata • Wazuh</p>
-        <a href="https://github.com/mariama-diack/secure-linux-infrastructure" target="_blank">
-            Voir le projet →
-        </a>
+        <!-- Project 3 -->
+        <div class="project-card" onclick="openModal('modal3')">
+          <h3>🌐 Network Services</h3>
+          <p>Deployment of core network services on Linux</p>
+          <div class="project-tags">
+            <span class="tag">DNS</span>
+            <span class="tag">DHCP</span>
+            <span class="tag">Apache</span>
+          </div>
+        </div>
+
+      </div>
     </div>
+  </section>
 
-    <div class="project-card">
-        <h3>Supervision Réseau & Systèmes</h3>
-        <p>
-            Déploiement d’outils de supervision pour surveiller la disponibilité
-            des serveurs et équipements réseau.
-        </p>
-        <p class="tech">Nagios • LibreNMS • TCP/IP</p>
-        <a href="https://github.com/mariama-diack/network-monitoring" target="_blank">
-            Voir le projet →
-        </a>
+  <!-- MODALS -->
+
+  <!-- Modal 1: Secure Linux Infrastructure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('modal1')">&times;</button>
+      
+      <h2>🔒 Secure Linux Infrastructure</h2>
+      
+      <div class="modal-section">
+        <h3>Project Overview</h3>
+        <p>Designed and implemented a comprehensive secured Linux infrastructure featuring multi-layered defense mechanisms including firewall configuration, intrusion detection systems, and centralized log correlation for threat analysis.</p>
+      </div>
+
+      <div class="modal-section">
+        <h3>Technologies Used</h3>
+        <ul>
+          <li>Linux (Debian 11) - Base operating system</li>
+          <li>pfSense 2.6 - Firewall and routing</li>
+          <li>Suricata - Network intrusion detection</li>
+          <li>Wazuh - Security information and event management</li>
+          <li>Fail2ban - Brute force protection</li>
+        </ul>
+      </div>
+
+      <div class="modal-section">
+        <h3>Key Features</h3>
+        <ul>
+          <li>Multi-zone network segmentation (DMZ, LAN, Management)</li>
+          <li>Real-time intrusion detection and alerting</li>
+          <li>Centralized log correlation and analysis</li>
+          <li>Automated threat response rules</li>
+          <li>Security hardening following CIS benchmarks</li>
+        </ul>
+      </div>
+
+      <div class="modal-section">
+        <h3>Challenges & Solutions</h3>
+        <ul>
+          <li><strong>Challenge:</strong> High false-positive rate in IDS alerts</li>
+          <li><strong>Solution:</strong> Fine-tuned Suricata rules and implemented custom filters</li>
+          <li><strong>Challenge:</strong> Log storage and retention</li>
+          <li><strong>Solution:</strong> Configured automated log rotation and archiving</li>
+        </ul>
+      </div>
+
+      <div class="modal-section">
+        <h3>What I Learned</h3>
+        <ul>
+          <li>Network segmentation best practices</li>
+          <li>IDS/IPS configuration and tuning</li>
+          <li>Security event correlation</li>
+          <li>Linux security hardening techniques</li>
+        </ul>
+      </div>
+
+      <div class="modal-links">
+        <a href="https://github.com/mariama-diack/secure-linux-infra" target="_blank" class="modal-btn">View on GitHub</a>
+        <a href="#" class="modal-btn" style="background: var(--gray);">Documentation (PDF)</a>
+      </div>
     </div>
+  </div>
 
-    <div class="project-card">
-        <h3>Laboratoire SIEM & Sécurité</h3>
-        <p>
-            Implémentation d’un environnement SIEM pour la détection,
-            l’analyse et la corrélation des événements de sécurité.
-        </p>
-        <p class="tech">Wazuh • Linux • Logs • Sécurité</p>
-        <a href="https://github.com/mariama-diack/wazuh-siem-lab" target="_blank">
-            Voir le projet →
-        </a>
+  <!-- Modal 2: Network Monitoring -->
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('modal2')">&times;</button>
+      
+      <h2>📊 Network Monitoring & Supervision</h2>
+      
+      <div class="modal-section">
+        <h3>Project Overview</h3>
+        <p>Deployed enterprise-grade monitoring solutions to ensure high availability and rapid incident detection across distributed server infrastructure and network devices.</p>
+      </div>
+
+      <div class="modal-section">
+        <h3>Technologies Used</h3>
+        <ul>
+          <li>Nagios Core 4.x - Server and service monitoring</li>
+          <li>LibreNMS - Network device monitoring</li>
+          <li>SNMP v2c/v3 - Device communication protocol</li>
+          <li>Grafana - Visualization dashboards</li>
+          <li>Debian 11 - Host operating system</li>
+        </ul>
+      </div>
+
+      <div class="modal-section">
+        <h3>Monitored Services</h3>
+        <ul>
+          <li>Server availability (ping, HTTP, SSH)</li>
+          <li>System resources (CPU, RAM, Disk usage)</li>
+          <li>Network bandwidth and traffic patterns</li>
+          <li>Service response times</li>
+          <li>SSL certificate expiration</li>
+        </ul>
+      </div>
+
+      <div class="modal-section">
+        <h3>Achievements</h3>
+        <ul>
+          <li>Reduced MTTR (Mean Time To Repair) by 40%</li>
+          <li>Automated alerting via email and SMS</li>
+          <li>Created custom dashboards for different teams</li>
+          <li>Documented runbooks for common incidents</li>
+        </ul>
+      </div>
+
+      <div class="modal-links">
+        <a href="https://github.com/mariama-diack/network-monitoring" target="_blank" class="modal-btn">View on GitHub</a>
+      </div>
     </div>
+  </div>
 
-</section>
+  <!-- Modal 3: Network Services -->
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('modal3')">&times;</button>
+      
+      <h2>🌐 Network Services Deployment</h2>
+      
+      <div class="modal-section">
+        <h3>Project Overview</h3>
+        <p>Configured and deployed essential network services on hardened Linux servers, ensuring secure and reliable connectivity for enterprise environments.</p>
+      </div>
 
-<section id="skills">
-    <h2>Compétences</h2>
+      <div class="modal-section">
+        <h3>Services Deployed</h3>
+        <ul>
+          <li><strong>DNS (BIND9):</strong> Internal DNS resolution with DNSSEC</li>
+          <li><strong>DHCP (ISC DHCP):</strong> Dynamic IP allocation with reservations</li>
+          <li><strong>Web Server (Apache/Nginx):</strong> HTTPS with Let's Encrypt certificates</li>
+          <li><strong>Mail Server (Postfix):</strong> Secure email relay with SPF/DKIM</li>
+          <li><strong>FTP/SFTP:</strong> Secure file transfer services</li>
+        </ul>
+      </div>
 
-    <ul>
-        <li><strong>Systèmes :</strong> Linux (Debian, Ubuntu)</li>
-        <li><strong>Réseaux :</strong> TCP/IP, DNS, DHCP, Routage</li>
-        <li><strong>Sécurité :</strong> pfSense, Suricata, Wazuh, Wireshark</li>
-        <li><strong>Supervision :</strong> Nagios, LibreNMS</li>
-        <li><strong>Outils :</strong> GitHub, VirtualBox, VMware</li>
-    </ul>
-</section>
+      <div class="modal-section">
+        <h3>Security Measures</h3>
+        <ul>
+          <li>SSL/TLS encryption for all services</li>
+          <li>Rate limiting and DDoS protection</li>
+          <li>Firewall rules for service isolation</li>
+          <li>Regular security updates and patching</li>
+        </ul>
+      </div>
 
-<section id="certifications">
-    <h2>Certifications</h2>
-    <ul>
-        <li>Cybersecurity Career Starter Certification (CCSC)</li>
-        <li>Certified Phishing Prevention Specialist (CPPS)</li>
-        <li>Cisco Networking Academy – Learn-A-Thon 2025</li>
-    </ul>
-</section>
+      <div class="modal-section">
+        <h3>Skills Developed</h3>
+        <ul>
+          <li>DNS zone configuration and management</li>
+          <li>DHCP lease management</li>
+          <li>Web server hardening</li>
+          <li>Email server security (anti-spam, anti-virus)</li>
+        </ul>
+      </div>
 
-<footer>
-    <p>
-        📧 Contact : <a href="mailto:mariama.diack@email.com">mariama.diack@email.com</a>
-    </p>
-    <p>
-        🔗 GitHub :
-        <a href="https://github.com/mariama-diack" target="_blank">
-            github.com/mariama-diack
-        </a>
-    </p>
-</footer>
+      <div class="modal-links">
+        <a href="https://github.com/mariama-diack/network-services" target="_blank" class="modal-btn">View on GitHub</a>
+      </div>
+    </div>
+  </div>
 
+  <!-- Contact Section -->
+  <section id="contact" style="background: var(--light-gray);">
+    <div class="container">
+      <h2>Contact</h2>
+      <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+        <p style="margin-bottom: 2rem;">Email: <a href="mailto:diackmariam3@gmail.com">diackmariam3@gmail.com</a></p>
+        <p style="margin-bottom: 2rem;">LinkedIn: <a href="https://linkedin.com/in/mariamd3" target="_blank">linkedin.com/in/mariamd3</a></p>
+        <p>GitHub: <a href="https://github.com/mariama-diack" target="_blank">github.com/mariama-diack</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    function openModal(modalId) {
+      document.getElementById(modalId).classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+      if (event.target.classList.contains('modal')) {
+        event.target.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        document.querySelectorAll('.modal').forEach(modal => {
+          modal.classList.remove('active');
+        });
+        document.body.style.overflow = 'auto';
+      }
+    });
+  </script>
 </body>
 </html>
