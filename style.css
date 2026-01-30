@@ -394,3 +394,27 @@ h2::after {
     margin: 1rem;
   }
 }
+/* =========================
+   CERTIFICATIONS
+   ========================= */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.certifications-grid img {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  padding: 1rem;
+  background: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.certifications-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
