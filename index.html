@@ -378,36 +378,65 @@
     </div>
   </section>
 
-  <!-- JavaScript -->
-  <script>
-    function openModal(modalId) {
-      document.getElementById(modalId).classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
+ <script>
+  /* =========================
+     PROJECT MODALS
+     ========================= */
+  function openModal(modalId) {
+    document.getElementById(modalId).classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
 
-    function closeModal(modalId) {
-      document.getElementById(modalId).classList.remove('active');
+  function closeModal(modalId) {
+    document.getElementById(modalId).classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+
+  /* Close project modal when clicking outside */
+  window.addEventListener('click', function(event) {
+    if (event.target.classList.contains('modal')) {
+      event.target.classList.remove('active');
       document.body.style.overflow = 'auto';
     }
 
-    // Close modal when clicking outside
-    window.onclick = function(event) {
-      if (event.target.classList.contains('modal')) {
-        event.target.classList.remove('active');
-        document.body.style.overflow = 'auto';
-      }
+    if (event.target.id === 'certModal') {
+      closeCert();
     }
+  });
 
-    // Close modal with Escape key
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape') {
-        document.querySelectorAll('.modal').forEach(modal => {
-          modal.classList.remove('active');
-        });
-        document.body.style.overflow = 'auto';
-      }
-    });
-  </script>
+  /* =========================
+     CERTIFICATION LIGHTBOX
+     ========================= */
+  function openCert(img) {
+    const modal = document.getElementById("certModal");
+    const modalImg = document.getElementById("certImg");
+
+    modal.style.display = "flex";
+    modalImg.src = img.src;
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeCert() {
+    document.getElementById("certModal").style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+
+  /* =========================
+     ESC KEY (GLOBAL)
+     ========================= */
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      // Close project modals
+      document.querySelectorAll('.modal').forEach(modal => {
+        modal.classList.remove('active');
+      });
+
+      // Close certification modal
+      closeCert();
+    }
+  });
+</script>
+
 
   <!-- Certification Lightbox -->
 <div id="certModal" class="cert-modal" onclick="closeCert()">
