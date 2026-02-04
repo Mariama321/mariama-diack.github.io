@@ -90,14 +90,15 @@
     <h2>Certifications</h2>
 
     <div class="certifications-grid">
-      <img src="assets/certifications/1.png" alt="Certification 1">
-      <img src="assets/certifications/2.png" alt="Certification 2">
-      <img src="assets/certifications/3.png" alt="Certification 3">
-      <img src="assets/certifications/4.png" alt="Certification 4">
-      <img src="assets/certifications/5.png" alt="Certification 5">
+      <img src="assets/certifications/1.png" alt="Certification 1" onclick="openCert(this)">
+      <img src="assets/certifications/2.png" alt="Certification 2" onclick="openCert(this)">
+      <img src="assets/certifications/3.png" alt="Certification 3" onclick="openCert(this)">
+      <img src="assets/certifications/4.png" alt="Certification 4" onclick="openCert(this)">
+      <img src="assets/certifications/5.png" alt="Certification 5" onclick="openCert(this)">
     </div>
   </div>
 </section>
+
 
 
   <!-- MODALS -->
@@ -407,5 +408,12 @@
       }
     });
   </script>
+
+  <!-- Certification Lightbox -->
+<div id="certModal" class="cert-modal" onclick="closeCert()">
+  <span class="cert-close">&times;</span>
+  <img class="cert-modal-content" id="certImg">
+</div>
+
 </body>
 </html>
